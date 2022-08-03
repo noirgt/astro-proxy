@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: astro-proxy:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
